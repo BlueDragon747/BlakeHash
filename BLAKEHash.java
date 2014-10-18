@@ -26,15 +26,11 @@ public class BLAKEHash implements HashFunction{
 	private static int currentwordlengthinbytes = 0;
 	private static byte [] currentword = new byte[4];
 	
-
-		
-
 	// Size of the hash coming out of it. 1 byte = 8 bits. 8 * 32 = 256 bits
 	public int digestSize() {
 		return digestSize;
 	}
 
-	
 	public void hash(int b) {
 		bytePack((byte) b);
 		if ( currentwordlengthinbytes == 4 ){
@@ -62,7 +58,6 @@ public class BLAKEHash implements HashFunction{
 		return word;
 	}
 
-
 	@Override
 	public void digest(byte[] d) {
 		for (int i = 0; i < 8; i++ ){
@@ -82,8 +77,6 @@ public class BLAKEHash implements HashFunction{
 		for(int h = 0; h < 8; ++h)
 		{
 			// Index computations
-			
-		
 			int j = sigma[h%10][0];
 			int k = sigma[h%10][1];
 			//Cols
@@ -138,7 +131,6 @@ public class BLAKEHash implements HashFunction{
 			m[3][3] = Integer.rotateRight((m[3][3] ^ m[0][3]), 8);
 			m[2][3] = m[2][3] + m[3][3];       // Step 4 (no input)
 			m[1][3] = Integer.rotateRight((m[1][3] ^ m[2][3]), 7);
-
 
 			//Diagonals
 					
