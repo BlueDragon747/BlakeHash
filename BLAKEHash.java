@@ -79,7 +79,7 @@ public class BLAKEHash implements HashFunction{
 	private void rounds(){
 		int [][] m = initialize();
 
-		for(int h = 0; h < 14; ++h)
+		for(int h = 0; h < 8; ++h)
 		{
 			// Index computations
 			
