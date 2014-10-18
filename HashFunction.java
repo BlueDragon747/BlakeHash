@@ -1,13 +1,11 @@
 public interface HashFunction
 	{
-
 	/**
 	 * Returns this hash function's digest size in bytes.
 	 *
 	 * @return  Digest size.
 	 */
 	public int digestSize();
-
 	/**
 	 * Append the given byte to the message being hashed. Only the least
 	 * significant 8 bits of <TT>b</TT> are used.
@@ -16,7 +14,6 @@ public interface HashFunction
 	 */
 	public void hash
 		(int b);
-
 	/**
 	 * Obtain the message digest. <TT>d</TT> must be an array of bytes whose
 	 * length is equal to <TT>digestSize()</TT>. The message consists of the
